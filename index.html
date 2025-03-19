@@ -3,16 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohit Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Awesome Redirect Page</title>
+    <style>
+        /* Smooth font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Full Page Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(135deg, #6a0dad, #ff6600);
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Main Container */
+        .container {
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        /* Heading Animation */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            animation: slideIn 1.5s ease-out forwards;
+        }
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards 0.5s;
+        }
+
+        /* Button Styling */
+        .redirect-btn {
+            padding: 12px 24px;
+            font-size: 1.2rem;
+            color: white;
+            background: #ff4500;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            opacity: 0;
+            animation: fadeIn 2s ease-out forwards 1s;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .redirect-btn:hover {
+            background: #ff6347;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to the Best Redirect Page</h1>
-        <p>This page contains a link that will take you to your desired destination.</p>
-        <a href="https://neuronstein07.github.io/mohit_di_ma_da_fudda/" id="redirectLink" class="fade-in">Click here to visit the website</a>
+        <h1>Welcome to the Awesome Redirect Page!</h1>
+        <p>Click the button below to visit an amazing website.</p>
+        <button class="redirect-btn" onclick="redirect()">Go to Website</button>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function redirect() {
+            window.open("https://neuronstein07.github.io/mohit_di_ma_da_fudda/", "_blank");
+        }
+    </script>
 </body>
 </html>
