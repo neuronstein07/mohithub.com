@@ -46,6 +46,13 @@
         }
 
         /* Button Styling */
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
         .redirect-btn {
             padding: 12px 24px;
             font-size: 1.2rem;
@@ -58,6 +65,8 @@
             opacity: 0;
             animation: fadeIn 2s ease-out forwards 1s;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            margin: auto;
         }
 
         .redirect-btn:hover {
@@ -92,13 +101,20 @@
 <body>
     <div class="container">
         <h1>Welcome to the Awesome Redirect Page!</h1>
-        <p>Click the button below to visit an amazing website.</p>
-        <button class="redirect-btn" onclick="redirect()">Go to Website</button>
+        <p>Click on any button below to visit an amazing website.</p>
+
+        <!-- Buttons Container -->
+        <div class="buttons-container">
+            <button class="redirect-btn" onclick="redirect('https://neuronstein07.github.io/mohit_di_ma_da_fudda/')">Go to Website 1</button>
+            <button class="redirect-btn" onclick="redirect('https://t.me/File_To_Link_2Bot?start=file_67db045ccf5470bded82bd80')">Click here to see the amazing video of nigga Mohit.</button>
+<!--             <button class="redirect-btn" onclick="redirect('https://google.com')">Go to Website 3</button>
+            <button class="redirect-btn" onclick="redirect('https://github.com')">Go to Website 4</button> -->
+        </div>
     </div>
 
     <script>
-        function redirect() {
-            window.open("https://neuronstein07.github.io/mohit_di_ma_da_fudda/", "_blank");
+        function redirect(url) {
+            window.open(url, "_blank");
         }
     </script>
 </body>
